@@ -174,3 +174,28 @@ function highlightSidebarLink() {
 
 // Add event listener for scroll to the global listener in script.js
 window.addEventListener('scroll', highlightSidebarLink);
+// --- New Sidebar Toggle Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (Existing DOMContentLoaded code) ... 
+
+    // Find the toggle button and the sidebar menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+
+    // Only run if the elements exist (i.e., we are on one of the main pages)
+    if (menuToggle && sidebarMenu) {
+        menuToggle.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('open');
+            menuToggle.classList.toggle('is-active'); // For potential hamburger animation
+        });
+        
+        // Close menu when a link is clicked (optional, but good UX)
+        sidebarMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebarMenu.classList.remove('open');
+                menuToggle.classList.remove('is-active');
+            });
+        });
+    }
+});
+
