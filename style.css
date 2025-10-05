@@ -1141,3 +1141,79 @@ footer a:hover {
         font-size: 1.2rem;
     }
 }
+/* ================================================= */
+/* 13. Mobile Sidebar Navigation (New Section) */
+/* ================================================= */
+
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1010; /* Above the header */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-accent-gold);
+    transition: all 0.3s linear;
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%;
+    background-color: var(--color-dark-surface);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1005;
+    transform: translateX(100%); /* Hidden off-screen by default */
+    transition: transform 0.4s ease-in-out;
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar-menu.open {
+    transform: translateX(0); /* Slides into view */
+}
+
+.sidebar-menu a {
+    color: var(--color-light-text);
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sidebar-menu a.active {
+    color: var(--color-accent-gold);
+}
+
+/* ------------------------------------------------- */
+/* Mobile Media Query Overrides */
+/* ------------------------------------------------- */
+
+@media (max-width: 600px) {
+    
+    /* HEADER FIX: Ensure logo is visible and toggle button appears */
+    header {
+        justify-content: space-between; /* Revert to space-between for icon */
+        padding: 1rem 5%;
+    }
+    header nav { 
+        display: none; /* Hides the complex desktop navigation */
+    } 
+    .menu-toggle {
+        display: flex; /* SHOW THE HAMBURGER ICON */
+    }
+
+    /* ... Keep all other mobile fixes from the previous response below ... */
+}
+
