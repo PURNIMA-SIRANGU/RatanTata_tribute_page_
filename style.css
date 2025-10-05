@@ -1167,10 +1167,10 @@ footer a:hover {
     .menu-toggle {
         display: flex; /* SHOW THE HAMBURGER ICON */
     }
-.bio-container h1 {
+    .bio-container h1 {
     font-size: 2rem !important; /* Forces the biography title to be much smaller */
     line-height: 1.2;
 }
-    /* ... Keep all other mobile fixes from the previous response below ... */
 
+    /* ... Keep all other mobile fixes from the previous response below ... */
 }
