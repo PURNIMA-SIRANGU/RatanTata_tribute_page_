@@ -1,3 +1,4 @@
+
 /* ================================================= */
 /* 1. Core Variables & Reset (UPDATED FOR POPPINS) */
 /* ================================================= */
@@ -943,48 +944,10 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-    /* Global Adjustments */
     h2 { font-size: 2rem; }
-    
-    /* HEADER FIX: Ensure logo is centered when navigation is hidden */
-    header {
-        /* When navigation is hidden, make the header content centered */
-        justify-content: center;
-    }
-    header nav { 
-        display: none; /* Hides the multi-link navigation */
-    } 
+    header nav { display: none; } /* Simple mobile hide */
 
-    /* === 1. index.html Hero Section Font Fix === */
-    .hero-content h1 {
-        font-size: 2.5rem; /* Ensures the main heading is clearly visible */
-    }
-    .hero-content p {
-        font-size: 1rem; /* Ensures body text is readable */
-    }
-    
-    /* === 2. quotes.html Snap Section Font Fix (Was using VW units) === */
-    .snap-content h1 { 
-        font-size: 10vw; /* Keeps the main title dominant */
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .snap-content h2 { 
-        font-size: 7vw;
-    }
-    .snap-content p { 
-        font-size: 4vw; 
-    }
-    .quote-text { 
-        font-size: 7vw; /* Main quote size */
-        padding-top: 50px; /* Space from top */
-    }
-    .quote-source { 
-        font-size: 4vw; 
-    }
-    
-    /* === 3. Carousel Page (Existing Fixes) === */
+    /* Carousel Page */
     .carousel .list .item .content .title{
         font-size: 30px;
     }
@@ -997,15 +960,6 @@ footer a:hover {
         bottom: 10px;
         top: auto;
         width: 100px;
-    }
-    
-    /* === 4. Comic Story Panel Fixes === */
-    /* Adjust text size after collapsing the grid */
-    .comic-panel .panel-content {
-        padding: 0; 
-    }
-    .comic-panel p {
-        font-size: 1rem;
     }
 }
 /* ================================================= */
@@ -1216,4 +1170,3 @@ footer a:hover {
 
     /* ... Keep all other mobile fixes from the previous response below ... */
 }
-
