@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratan Tata: Story in Panels</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Panel-specific background images */
+        .panel-1 { 
+            background-image: url('Motivational Quotes By Ratan Tata.jfif'); /* Young portrait */
+            background-size: cover; 
+            background-position: center top; 
+        }
+        .panel-2 { 
+            background-image: url('Chairmen of Tata Sons.jfif'); /* Pinstripe suit portrait */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-3 { 
+            background-image: url('RIP Ratan TATA.jfif'); /* Smiling at Tata Motors */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-4 { 
+            background-image: url('A true leadet.jfif'); /* Contemplative nature shot */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-5 { 
+            background-image: url('Sir Ratan Naval Tata (1937 – 2024).jfif'); /* Classic B&W suit */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-6 { 
+            background-image: url('Ratan tata illustration.jfif'); /* Illustration in thought */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-7 { 
+            background-image: url('Ratan Naval Tata portrait.jfif'); /* Painted smiling portrait */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .panel-8 { 
+            background-image: url('ratan tata drawing.jfif'); /* Black and white drawing */
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        /* Ensure text is readable over the image background */
+        .comic-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        }
+        .panel-5::before {
+            background: rgba(0, 0, 0, 0.6); /* Deeper overlay for center focus */
+        }
+        .panel-8::before {
+            background: rgba(0, 0, 0, 0.2); /* Lighter overlay for sketch */
+        }
+        
+        .panel-content {
+            z-index: 2; /* Ensures content is above the overlay */
+            color: var(--color-light-accent);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        .panel-title {
+            color: var(--color-accent-gold);
+        }
+    </style>
+</head>
+<body class="comic-body">
+
+    <header>
+        <div class="logo">RATAN TATA TRIBUTE</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biography.html">Life Story</a>
+            <a href="quotes.html">Quotes & Vision</a>
+            <a href="carousel.html">Key Incidents</a>
+            <a href="resources.html">Library</a>
+            <a href="comic_story.html" class="active">Story in Panels</a> 
+        </nav>
+    </header>
+
+    <main class="comic-container">
+        <h1 style="text-align: center; font-size: 3rem; margin: 20px 0;">
+            A Corporate Chronicle: The Ratan Tata Panels
+        </h1>
+
+        <div class="comic-grid">
+            
+            <div class="comic-panel panel-1">
+                <div class="panel-content">
+                    <p>The year is 1991. India opens its economy. A quiet architect takes the helm of a sprawling, old empire.</p>
+                </div>
+            </div>
+
+            <div class="comic-panel panel-2">
+                <div class="panel-content">
+                    <p class="panel-title">The Inheritance of Trust</p>
+                    <p>J.R.D. Tata passes the heavy, ethical mantle. The challenge: globalize without losing the soul of the business.</p>
+                </div>
+            </div>
+
+            <div class="comic-panel panel-3">
+                <div class="panel-content">
+                    <p>The world is cynical. Competitors dismiss India's capabilities. A plan for global expansion begins in silence.</p>
+                </div>
+            </div>
+
+            
+            <div class="comic-panel panel-4">
+                <div class="panel-content">
+                    <p class="panel-title">The Price of Integrity</p>
+                    <p>Confrontations arise—political, financial, and ethical. He rejects deals that compromise the Tata name.</p>
+                </div>
+            </div>
+
+            <div class="comic-panel panel-5">
+                <div class="panel-content">
+                    <h2 class="panel-title" style="font-size: 2.5rem; color: var(--color-accent-gold);">
+                        INNOVATION FOR THE PEOPLE
+                    </h2>
+                    <p style="font-size: 1.2rem; margin-top: 10px;">
+                        "If you want to walk fast, walk alone. But if you want to walk far, walk together." This principle guides the most audacious project: the affordable car for the common man—the **Nano**.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="comic-panel panel-6">
+                <div class="panel-content">
+                    <p class="panel-title">Silent Victory</p>
+                    <p>Years after facing disrespect, the opportunity for ultimate vindication arrives: the acquisition of Jaguar Land Rover.</p>
+                </div>
+            </div>
+
+            <div class="comic-panel panel-7">
+                <div class="panel-content">
+                    <h3 class="panel-title" style="font-size: 1.8rem;">The Test of Character: Mumbai, 2008</h3>
+                    <p>When the Taj Hotel was attacked, he rebuilt not just the walls, but the lives of every employee and affected individual. The human equation precedes the balance sheet.</p>
+                </div>
+            </div>
+
+            <div class="comic-panel panel-8">
+                <div class="panel-content">
+                    <p>The legacy is not just in assets, but in the **trust** he instilled in a nation.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Dedicated to the eternal spirit of Ratan N. Tata.</p>
+        <div class="footer-links">
+            <a href="#">Ethics</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Acknowledgments</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

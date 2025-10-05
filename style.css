@@ -1,0 +1,1097 @@
+
+/* ================================================= */
+/* 1. Core Variables & Reset (UPDATED FOR POPPINS) */
+/* ================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Colors */
+    --color-dark-bg: #121212;
+    --color-dark-surface: #1e1e1e;
+    --color-light-text: #e0e0e0;
+    --color-light-accent: #f0f0f0;
+    --color-accent-gold: #b8860b;
+    --color-carousel-accent: #f1683a;
+    --color-cta-red: #d1212c;
+
+    /* Fonts - Now using Poppins for everything for consistency */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent-gold);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-light-accent);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-light-accent);
+    margin-bottom: 0.5em;
+    font-weight: 700; /* Ensure headings are bold */
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* ================================================= */
+/* 2. Main Site Header (From index (4).html) */
+/* ================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.95);
+    z-index: 1000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900; /* Extra bold for the logo */
+    color: var(--color-accent-gold);
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: var(--color-light-text);
+    margin-left: 25px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a:hover, header nav a.active {
+    color: var(--color-accent-gold);
+    border-bottom: 2px solid var(--color-accent-gold);
+}
+
+.contact-btn {
+    background-color: var(--color-accent-gold);
+    color: var(--color-dark-bg) !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 2px solid var(--color-accent-gold);
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: transparent;
+    color: var(--color-accent-gold) !important;
+}
+
+/* ================================================= */
+/* 3. Home Page (index.html) Styles */
+/* ================================================= */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('images/Sir Ratan Naval Tata (1937 – 2024).jfif') center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding-top: 100px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 0.2em;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-accent-gold);
+}
+
+.content-section {
+    display: flex;
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+    background-color: var(--color-dark-bg);
+}
+
+.content-section.reverse-layout {
+    flex-direction: row-reverse;
+    background-color: var(--color-dark-surface);
+}
+
+.section-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-text h2 {
+    text-align: left;
+    margin: 0 0 0.5em 0;
+    font-size: 2.5rem;
+}
+
+.section-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.section-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Transition/Parallax Hook */
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: 2px solid var(--color-accent-gold);
+    color: var(--color-accent-gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: var(--color-accent-gold);
+    color: var(--color-dark-bg);
+}
+
+.cta-section {
+    background-color: var(--color-dark-surface);
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.cta-section .quote {
+    font-style: italic;
+    color: var(--color-light-accent);
+    font-size: 2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--color-accent-gold);
+    color: var(--color-dark-bg);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+
+/* ================================================= */
+/* 4. Biography Page (biography.html) Styles */
+/* ================================================= */
+
+.bio-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 0 4rem 0; /* Add top padding for fixed header */
+}
+
+.content-block {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.content-block:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.content-media, .content-text {
+    flex: 1;
+}
+
+.content-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.content-text {
+    padding: 20px 0;
+}
+
+.content-text p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 2rem 0;
+}
+
+.grid-item {
+    background-color: var(--color-dark-surface);
+    padding: 30px;
+    border-left: 5px solid var(--color-accent-gold);
+    transition: transform 0.3s ease;
+}
+
+.grid-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* ================================================= */
+/* 5. Quotes Page (quotes.html) Styles */
+/* ================================================= */
+.scroll-snap-body {
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+}
+
+.scroll-snap-wrapper {
+    scroll-snap-type: y mandatory;
+    height: auto;
+    overflow-y: visible;
+    background-color: var(--color-dark-bg);
+}
+
+.snap-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 5vw;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+}
+
+.snap-content {
+    max-width: 1000px;
+    z-index: 2;
+    padding-top: 50px; /* Account for fixed header */
+}
+
+.snap-content h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 0.1em;
+}
+
+.snap-content h2 {
+    font-size: 3vw;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+}
+
+.snap-content p {
+    font-size: 1.5vw;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.quote-slides-wrapper {
+    background-color: var(--color-dark-surface);
+}
+
+.quote-slide {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 10vw;
+    scroll-snap-align: start;
+}
+
+.quote-text {
+    font-size: 4vw;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 900px;
+    margin-bottom: 30px;
+    font-family: var(--font-heading);
+}
+
+.quote-source {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: var(--color-cta-red);
+}
+
+/* Background Images for Quotes Page */
+.intro-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('images/download.jfif') center/cover no-repeat;
+}
+.visionary-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/cṇky.jfif') center/cover no-repeat;
+}
+.leadership-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('images/jwabs.jfif') center/cover no-repeat;
+}
+.legacy-section {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url('images/download (4).jfif') center/cover no-repeat;
+}
+/* ================================================= */
+/* 10. Resources Page (FINAL IMAGE THEME STYLE) */
+/* ================================================= */
+
+/* Global container reset for the cards to flow */
+.resources-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8rem 2% 4rem 2%; /* Top padding for fixed header */
+}
+
+.gallery-grid {
+    display: grid;
+    /* 4 columns on large screens, minimum card size 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.resource-card {
+    position: relative;
+    height: 450px; /* Taller height to match the reference image's card proportion */
+    overflow: hidden;
+    border-radius: 8px;
+    /* Removed box-shadow to match the flat, internal-lighting look of the reference image */
+    box-shadow: none; 
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #1e1e1e; /* Ensure dark background beneath the image/overlay */
+}
+
+/* Subtle Hover Effect (Match the image's dark, rich feel) */
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+/* Background Image styling */
+.resource-card-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.8; /* Make the image slightly transparent beneath the overlay */
+}
+
+/* Text Overlay Styling (CRITICAL: Matches the deep gradient and centered text) */
+.resource-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Deep gradient from top to bottom, heavily darkening the image */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.7) 100%);
+    
+    /* Use flexbox to center and align text similar to the reference image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes links to the bottom */
+    padding: 30px 20px;
+    color: var(--color-light-text);
+    z-index: 10;
+    text-align: center; /* Center the title text */
+}
+
+/* Top corner Tag/Date box (Matches the white/light box in the reference image) */
+.resource-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-light-accent); /* White/Light Box */
+    color: var(--color-dark-bg); /* Dark text on light box */
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom-right-radius: 8px; /* Curve the bottom-right edge */
+    z-index: 20;
+    line-height: 1;
+}
+
+/* Title text (Most prominent feature in the reference image) */
+.resource-title {
+    /* Title is now in the center, not the bottom */
+    order: 0; /* Ensures the title is positioned first in the flex flow */
+    margin-top: 50px; /* Push the title down from the top tag */
+    font-size: 1.8rem; /* Large, bold title */
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-light-accent);
+    /* Set max-width to break lines more easily, matching the narrow feel */
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1; /* Pushes content below it down */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the title */
+}
+
+/* Category Text (Smaller text below the title) - Not highly visible in the reference, but kept for data */
+.resource-category {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #ccc;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Link/Button Area (At the very bottom of the card) */
+.resource-link-container {
+    order: 1; /* Ensures this area is pushed to the bottom */
+    width: 100%;
+}
+
+.resource-link {
+    display: block;
+    text-decoration: none;
+    color: var(--color-accent-gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* Style matches the CTA button at the bottom of the reference image */
+    border: 1px solid var(--color-accent-gold); 
+    background-color: rgba(184, 134, 11, 0.1); /* Very subtle gold background */
+    padding: 12px 10px;
+    border-radius: 4px;
+    margin-top: 10px; /* Space between the two links */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resource-link:hover {
+    background-color: var(--color-accent-gold);
+    color: var(--color-dark-bg);
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .resource-card {
+        height: 400px;
+    }
+    .resource-title {
+        font-size: 1.6rem;
+    }
+    .resource-overlay {
+        padding: 20px 15px;
+    }
+}
+
+/* ================================================= */
+/* 6. Carousel Page (carousel.html) Styles */
+/* ================================================= */
+.carousel-body {
+    font-family: var(--font-body);
+    font-size: 12px;
+}
+
+.carousel-header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.carousel-header a {
+    color: #eee;
+    margin-right: 40px;
+}
+
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3em;
+    font-family: var(--font-heading);
+}
+
+.carousel .list .item .topic{
+    color: var(--color-carousel-accent);
+}
+
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    transform: translateX(-50%);
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transform: translateX(-50%);
+}
+
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation (Full animation styles are left to be managed by app.js and the classes it adds) */
+
+/* running time */
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-carousel-accent);
+    left: 0;
+    top: 0;
+}
+
+/* All animation keyframes from style (3).css are copied below to ensure app.js works correctly */
+.carousel .list .item:nth-child(1){ z-index: 1; }
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{ animation-delay: 1.2s!important; }
+.carousel .list .item:nth-child(1) .content .topic{ animation-delay: 1.4s!important; }
+.carousel .list .item:nth-child(1) .content .des{ animation-delay: 1.6s!important; }
+.carousel .list .item:nth-child(1) .content .buttons{ animation-delay: 1.8s!important; }
+
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.carousel.prev .list .item img{ z-index: 100; }
+
+@keyframes showThumbnail{ from{ width: 0; opacity: 0; } }
+
+.carousel.next .thumbnail{ animation: effectNext .5s linear 1 forwards; }
+
+@keyframes effectNext{ from{ transform: translateX(150px); } }
+
+.carousel.next .time,
+.carousel.prev .time{ animation: runningTime 3s linear 1 forwards; }
+
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+.carousel.prev .list .item:nth-child(2){ z-index: 2; }
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button{ pointer-events: none; }
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{ animation: contentOut 1.5s linear 1 forwards!important; }
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* ================================================= */
+/* 7. Scroll-Reveal Base */
+/* ================================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Staggered Delay for general content */
+.section-text .scroll-reveal:nth-child(1) { transition-delay: 0.0s; }
+.section-text .scroll-reveal:nth-child(2) { transition-delay: 0.1s; }
+.section-text .scroll-reveal:nth-child(3) { transition-delay: 0.2s; }
+
+/* ================================================= */
+/* 8. Footer (Shared) */
+/* ================================================= */
+footer {
+    background-color: var(--color-dark-surface);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+footer a {
+    color: #888;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: var(--color-light-text);
+}
+
+/* ================================================= */
+/* 9. Media Queries (Responsiveness) */
+/* ================================================= */
+@media (max-width: 992px) {
+    /* Home Page */
+    .content-section, .content-section.reverse-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-text h2 { text-align: center; }
+    .section-image { height: 300px; margin-top: 30px; }
+    .hero-content h1 { font-size: 3rem; }
+    .hero-content p { font-size: 1.2rem; }
+
+    /* Biography Page */
+    .content-block, .content-block:nth-child(odd) {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bio-container h2 { font-size: 2rem; }
+
+    /* Quotes Page */
+    .snap-content h1 { font-size: 8vw; }
+    .snap-content h2 { font-size: 5vw; }
+    .snap-content p { font-size: 3.5vw; }
+    .quote-text { font-size: 6vw; }
+    .quote-source { font-size: 3vw; }
+
+    /* Carousel Page */
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 { font-size: 2rem; }
+    header nav { display: none; } /* Simple mobile hide */
+
+    /* Carousel Page */
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+    .thumbnail{
+        display: none;
+    }
+    .arrows{
+        right: 50%;
+        transform: translateX(0);
+        bottom: 10px;
+        top: auto;
+        width: 100px;
+    }
+}
+/* ================================================= */
+/* 12. COMIC PANEL LAYOUT (New Page Style) */
+/* ================================================= */
+
+.comic-body {
+    background-color: var(--color-dark-bg);
+}
+
+.comic-container {
+    width: 90%;
+    max-width: 1000px; /* Maximize the dramatic effect */
+    margin: 80px auto 40px auto;
+    padding: 0;
+}
+
+/* Base Grid for the 7-Panel Layout */
+.comic-grid {
+    display: grid;
+    /* Defines 3 columns and 3 primary rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 25vh 40vh 30vh;
+    gap: 10px; /* Small gap between panels */
+    overflow: hidden;
+    margin: 40px 0;
+    border: 2px solid var(--color-light-accent); /* Outer border for drama */
+}
+
+/* Panel Styling */
+.comic-panel {
+    background-color: var(--color-dark-surface);
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.panel-content {
+    z-index: 2;
+    padding: 10px;
+}
+
+.panel-title {
+    font-size: 1.5rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.5em;
+}
+
+/* ----------------- Panel Placement and Shaping ----------------- */
+
+/* ROW 1: Three Equal Vertical Panels */
+.panel-1 { grid-area: 1 / 1 / 2 / 2; }
+.panel-2 { grid-area: 1 / 2 / 2 / 3; }
+.panel-3 { grid-area: 1 / 3 / 2 / 4; }
+
+/* ROW 2: The Angled V-Shape */
+.panel-4, .panel-5, .panel-6 { 
+    grid-row: 2;
+    /* Panels 4, 5, 6 span all 3 columns */
+    grid-column: 1 / 4; 
+    padding: 0; 
+}
+
+/* Panel 4: Left Side, Angled Top/Right */
+.panel-4 {
+    /* Use skew or polygon for the angled effect */
+    -webkit-clip-path: polygon(0 0, 80% 0, 80% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0, 80% 100%, 0% 100%);
+    grid-column: 1 / 2;
+    padding: 15px;
+    justify-content: flex-start;
+}
+
+/* Panel 5: Wide Center Panel */
+.panel-5 {
+    grid-column: 2 / 3;
+    padding: 15px;
+    background-color: #000; /* Darker center for emphasis */
+    /* Use skew/margin to meet the angled sides */
+    transform: perspective(200px) rotateY(-3deg) translateX(-10px); 
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.5); /* Gold glow */
+    z-index: 10; 
+    
+    /* Reverse transform for content to stay straight */
+    transform-origin: center center;
+    display: block;
+}
+/* Re-straighten content in Panel 5 */
+.panel-5 .panel-content {
+    transform: rotateY(3deg) translateX(10px);
+}
+
+
+/* Panel 6: Right Side, Angled Top/Left */
+.panel-6 {
+    -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
+    grid-column: 3 / 4;
+    padding: 15px;
+    justify-content: flex-start;
+}
+
+/* ROW 3: Bottom Panels */
+.panel-7 { grid-area: 3 / 1 / 4 / 3; } /* Wide panel spans 2 columns */
+.panel-8 { grid-area: 3 / 3 / 4 / 4; } /* Narrow panel spans 1 column */
+
+
+/* ----------------- Media Query Cleanup ----------------- */
+@media (max-width: 768px) {
+    /* Collapse to single-column stack on small screens for readability */
+    .comic-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, minmax(200px, auto));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .panel-1, .panel-2, .panel-3, .panel-4, .panel-5, .panel-6, .panel-7, .panel-8 {
+        grid-area: auto !important;
+        clip-path: none !important;
+        transform: none !important;
+        padding: 20px !important;
+    }
+    .panel-5 .panel-content {
+        transform: none !important;
+    }
+    .panel-title {
+        font-size: 1.2rem;
+    }
+}
