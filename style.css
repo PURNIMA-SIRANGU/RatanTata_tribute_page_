@@ -1155,7 +1155,10 @@ footer a:hover {
 /* ------------------------------------------------- */
 
 @media (max-width: 600px) {
-    
+      .hero-section {
+        /* FIX: Shifts the background image slightly left (40%) to keep the face visible */
+        background-position: 70% center !important; 
+    }
     /* HEADER FIX: Ensure logo is visible and toggle button appears */
     header {
         justify-content: space-between; /* Revert to space-between for icon */
@@ -1171,6 +1174,7 @@ footer a:hover {
     font-size: 2rem !important; /* Forces the biography title to be much smaller */
     line-height: 1.2;
 }
+
 
     /* ... Keep all other mobile fixes from the previous response below ... */
 }
