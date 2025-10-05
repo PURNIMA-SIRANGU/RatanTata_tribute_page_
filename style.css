@@ -945,7 +945,15 @@ footer a:hover {
 @media (max-width: 600px) {
     /* Global Adjustments */
     h2 { font-size: 2rem; }
-    header nav { display: none; } /* Simple mobile hide */
+    
+    /* HEADER FIX: Ensure logo is centered when navigation is hidden */
+    header {
+        /* When navigation is hidden, make the header content centered */
+        justify-content: center;
+    }
+    header nav { 
+        display: none; /* Hides the multi-link navigation */
+    } 
 
     /* === 1. index.html Hero Section Font Fix === */
     .hero-content h1 {
